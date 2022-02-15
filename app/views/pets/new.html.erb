@@ -1,0 +1,9 @@
+<%= simple_form_for @pet do |f| %>
+  <div class="bg-red-500">
+  <%= f.input :name%>
+  </div>
+  <%= f.input :address %>
+  <%= f.input :found_on %>
+  <%= f.input :species,as: :select, collection: Pet::SPECIES %>
+  <%= f.button :submit %>
+<% end %>
